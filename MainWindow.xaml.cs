@@ -35,32 +35,24 @@ namespace ComputerSimulationLB1
             menuFile.Import();
         }
 
-        private void CalculatDataClick(object sender, RoutedEventArgs e)
-        {
-            CalculatData(boxAmountIron.Text);
-        } 
-         
-        private void CalculatData(string amountIronString)
+        private void CalculateDataClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                double amountIron = double.Parse(amountIronString.Replace(".", ","));
-                double time = b0 + b1 * amountIron;
-
-                boxMeltingTime.Text = Math.Round(time, 2).ToString();
+                boxMeltingTime.Text = CalculateData(boxAmountIron.Text);
             }
             catch
             {
                 MessageBox.Show("Перевірте коректність введених даних");
             }
-        }
-
-        public object CalculateData(object amountIronObject)
+        } 
+         
+        public string CalculateData(string amountIronString)
         {
-            double amountIron = double.Parse(amountIronObject.ToString().Replace(".", ","));
+            double amountIron = double.Parse(amountIronString.Replace(".", ","));
             double time = b0 + b1 * amountIron;
 
-            return Math.Round(time, 2);
+            return Math.Round(time, 2).ToString();
         }
 
         private void MyWindowClosing(object sender, System.ComponentModel.CancelEventArgs e)

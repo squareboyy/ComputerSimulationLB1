@@ -19,6 +19,6 @@
         <Label Content="Час плавки(ч)" FontWeight="Bold" Padding="0" HorizontalAlignment="Left" Margin="27,167,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="boxMeltingTime" IsReadOnly="True" HorizontalAlignment="Left" Margin="27,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" Height="30"/>
 
-        <Button Content="Розрахувати дані" Click="CalculatDataClick" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,118,0,0" VerticalAlignment="Top" Width="410" Height="30"/>
+        <Button Content="Розрахувати дані" Click="CalculateDataClick" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,118,0,0" VerticalAlignment="Top" Width="410" Height="30"/>
     </Grid>
 </Window>

@@ -24,9 +24,9 @@ namespace ComputerSimulationLB1.MenuItems
 
         private readonly ObservableCollection<StaticModel> model = new();
 
-        public void AddingData(List<object> list)
+        public void AddingData(List<string> list)
         {
-            var record = new StaticModel(Int32.Parse(list[0].ToString()), double.Parse(list[1].ToString()), double.Parse(list[2].ToString()));
+            var record = new StaticModel(Int32.Parse(list[0]), double.Parse(list[1]), double.Parse(list[2]));
             model.Add(record);
 
             dataGrid.ItemsSource = model;

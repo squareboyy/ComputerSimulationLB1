@@ -40,7 +40,7 @@ namespace ComputerSimulationLB1.MenuItems
         private void ImportAction(string filePath, ExportWindow exportWindow)
         {
             MainWindow mainWindow = new();
-            List<object> list = new();
+            List<string> list = new();
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (var package = new ExcelPackage(new FileInfo(filePath)))
@@ -56,7 +56,7 @@ namespace ComputerSimulationLB1.MenuItems
                     {
                         if (!string.IsNullOrWhiteSpace(worksheet.Cells[row, col].Value.ToString()))
                         {
-                            list.Add(worksheet.Cells[row, col].Value);
+                            list.Add(worksheet.Cells[row, col].Value.ToString());
                         }
                     }
 
